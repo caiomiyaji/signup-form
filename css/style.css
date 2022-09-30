@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --color1: #359845;
+    --color2: #003B0F;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+}
+
+main{
+    height: 100vh;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-content{
+    width: 50%;
+    height: 100%;
+    background-image: url('https://images.pexels.com/photos/192136/pexels-photo-192136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.form-content > p{
+    display: none;
+}
+
+form{
+    transform: translateY(-5%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+}
+
+legend{
+    margin-bottom: 60px;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+label{
+    letter-spacing: 0;
+}
+
+form > div{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%; 
+}
+
+input:not([type="submit"]){
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    outline-color: #333333;
+    
+}
+
+input::placeholder{
+    color: #a8a8a8;
+    font-size: 1.1em;
+}
+
+input[type="submit"]{
+    margin-top: 50px;
+    background-color: var(--color2);
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1em;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+input[type="submit"]:hover{
+    background-color: var(--color1);
+}
+
+input.error-input{
+    border: 1px solid red;
+}
+
+.error{
+    color: rgb(219, 0, 0);
+    font-size: 0.8em;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 975px) {
+
+    main{
+        height: 900px;
+    }
+
+    .image-content{
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        inset: 0;
+    }
+
+    .form-content{
+        width: 100%;
+    }
+
+    legend{
+        margin-bottom: 100px;
+        color: white;
+        text-shadow: 2px 2px 2px black;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    
+    legend{
+        font-size: 2em;
+    }
+}
+
+
